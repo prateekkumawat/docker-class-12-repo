@@ -1,0 +1,33 @@
+# Running Contaiers show
+
+root@localhost:~# docker ps 
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+
+# Crate container of nginx webapp
+-d -- detach mode -i---> interactive -t---> terminal   container1 --- container name   ----- nginx --- app image  
+root@localhost:~# docker run -dit --name container1 nginx 
+aa8273f7d05092ae62d49df03f65e1ef8dd7bc64ef06127df39bff526ef1b790
+
+root@localhost:~# docker  ps 
+CONTAINER ID   IMAGE     COMMAND                  CREATED         STATUS         PORTS     NAMES
+aa8273f7d050   nginx     "/docker-entrypoint.…"   5 seconds ago   Up 4 seconds   80/tcp    container1
+
+
+# Connect with container or login in container 
+
+root@localhost:~# docker exec -it container1 bash 
+root@aa8273f7d050:/# ----> @ hostname --- Container_ID 
+// when you run docker ps command 
+
+# show list of images in container
+root@localhost:/home/kiosk# docker image ls 
+                                                                                     i Info →   U  In Use
+IMAGE                 ID             DISK USAGE   CONTENT SIZE   EXTRA
+nginx:latest          ca871a86d45a        225MB         62.6MB        
+redhat/ubi10:latest   4fa402808c6d        307MB         80.2MB    U   
+ubuntu:latest         c35e29c94501        115MB         29.7MB        
+
+# open container port to connect with external 
+oot@localhost:/home/kiosk# docker run -dit --name redhat_container -p 80:80 -p 81:81 redhat/ubi10:latest4be86d7c734302778fdedab5af69c46612f7e92aef16bfe791c20ca0890f5db1
+root@localhost:/home/kiosk#
+

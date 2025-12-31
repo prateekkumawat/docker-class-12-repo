@@ -1,0 +1,5 @@
+# create a container with name apache_container using image redhat/ubi10:latest host an hello web page on that should be accessiable using your docker host machine ip. 
+
+# create a nginx web app container with nginx app and host your container on port 83 when send request on dockerhost_ip:83 page should be accessiable. 
+
+# create a virtual hosting in redhat container on multuile diffrent ports. 
