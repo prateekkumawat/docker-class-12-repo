@@ -1,0 +1,50 @@
+- currently container crate 
+- manual configuration like we do in server
+- container need to rebiuld if you want update port or storage any conf 
+- using docker commit create container image 
+- devops will stuck in this and faced lots of problem in release new code 
+
+# A Dockerfile is a text file containing step-by-step instructions to automatically build a Docker image
+
+# FROM :::: 
+- base image call --- like ubuntu redhat 
+- OM instruction initializes a new build stage and sets the base image for subsequent instructions
+
+# Labels :::: 
+- The LABEL instruction adds metadata to an image. A LABEL is a key-value pair
+- basic info mention in image like Licence, Orgnization, product Details, author Details or any other relative metadata
+
+# COPY ::::
+- copy your data from base host to image path 
+- copy use any data that availabel in your Dockerfile Path like src code, files and directory and others. 
+
+# ADD ::::
+- work smilier like copy 
+- COPY data from sources like any thirdparty link in image 
+- if you use tar then copy and extract in image 
+
+# RUN :::: 
+- if you want to run any command in image 
+- RUN instruction will execute any commands 
+- Execution Time is image build 
+- Installing software or dependencies ; Creating directories or files needed by the application; Compiling application code one time excutes 
+
+# CMD ::::
+- CMD instruction sets the command to be executed 
+- Execution Time is container start 
+- Starting your application's main process 
+
+
+# ENtrypoint 
+- CMD instruction sets the command to be executed nut its override define entrypoint its not override 
+
+# USER 
+-  image when login default  login is root in container 
+- user instructuion change your login user default in container 
+
+# WORKDIR 
+- Define your default directory 
+
+# ARG 
+- provide runtime enviorment variables for dockerfile 
+- define user define values using ARG
