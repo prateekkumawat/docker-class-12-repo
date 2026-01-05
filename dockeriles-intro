@@ -48,3 +48,14 @@
 # ARG 
 - provide runtime enviorment variables for dockerfile 
 - define user define values using ARG
+
+
+refreance doc for study 
+https://docs.docker.com/reference/dockerfile/#entrypoint
+- why we use Dockerfile 
+- how to reduce size of image 
+- diff b/w cmd and RUN 
+- diff b/w cmd vs run vs entrypoint 
+- diff b/w copy and add 
+- how to build images 
+- Dockerfile build command 
