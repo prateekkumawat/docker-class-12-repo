@@ -1,0 +1,7 @@
+name: nextjs-docker-project 
+services: 
+   nextjs-app:
+     container_name: nextjs-app 
+     image: nextjs:latest  
+     ports: 
+      - 8082:80
